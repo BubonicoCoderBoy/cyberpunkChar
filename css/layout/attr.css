@@ -1,0 +1,31 @@
+.char-sheet-attr{
+}
+
+
+.rd-table{
+	margin-top: 10px;
+	width: 100%;
+}
+.rd-table td,.rd-table th{
+	padding: 10px 5px;
+	text-align: center;
+}
+
+
+.atr-table{
+	margin-top: 10px;
+	width: 100%;
+}
+.atr-table td,.atr-table th{
+	padding: 10px;
+}
+.atr-table th{
+	width: 50px;
+}
+
+.misc{
+	margin-top: 10px;
+}
+.misc > :last-child{
+	width: 100%;
+}

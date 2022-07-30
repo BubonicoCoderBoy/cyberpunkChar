@@ -1,0 +1,15 @@
+.char-sheet-header{
+	text-align: center;
+	font-size: 20px;
+}
+.char-sheet-header>*{
+	justify-content: space-around;
+}
+
+.char-sheet-title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 28px;
+	font-style: italic;
+}
