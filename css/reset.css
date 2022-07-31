@@ -9,10 +9,13 @@ div{
 ul{
 	list-style-position: inside;
 }
+li{
+	margin: 5px;
+}
 td,th{
 	border: 1px solid;
 	margin: 5px;
-	padding: 5px;
+	padding: 5px 10px;
 	border-radius: 3px;
 	
 }
@@ -20,7 +23,15 @@ th{
 	text-align: left;
 }
 .input{
-	color: red;
 	text-align: center;
 	font-style: italic;
+}
+img{
+	width: 300px;
+	display: block;
+	margin: auto;
+}
+
+hr,h3{
+	margin: 10px 0px;
 }
