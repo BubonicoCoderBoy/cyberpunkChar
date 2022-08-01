@@ -1,7 +1,7 @@
 export var ficha = {
-	id:0,
-	nome:"Cassandra",
-	role:"Nomade",
+	id:1,
+	nome:"Bud Weiser",
+	role:"Midia",
 	attr:{
 		INT:3,
 		REF:10,
@@ -14,7 +14,7 @@ export var ficha = {
 		EMP:7,
 		Correr:18,
 		Saltar:4.5,
-		Levantar:100
+		Levantar:10
 	},
 	rd:{
 		cabeca:0,
@@ -26,14 +26,11 @@ export var ficha = {
 	},
 	VIT:14,
 	MTC:0,
-	imgPath:"./assets/cassy.png",
+	imgPath:"./assets/bud.png",
 	perks:{
 		special:[
 			["Familia",3],
 			["Resistencia",6]
-		],
-		auCon: [
-			["Intimidação",6]
 		],
 		int: [
 			["Atenção/Notar",1],
@@ -64,20 +61,6 @@ export var ficha = {
 		["Armação - B",0,0],
 		["Arma Retratil - Militech Elect. Canhão Laser",0,0]
 	],
-	armas:[
-		["Porrete","ArmBrn","0","S","C","1D6","N","N","N"],
-		["Budget Arm C-13","P","-1","B","E","1D6","8","2","C"],
-		["Militech Elect. Canhão Laser","Fuz","0","N","R","1-5D6","10","2","C"]
-	],
-	equipo:[
-		["Equipamento Blablabk","Preço","Peso"],
-		["Equipamento 2","Preço","Peso"],
-		["Equipamento 3","Preço","Peso"],
-		["Equipamento 4","Preço","Peso"],
-		["Equipamento 5","Preço","Peso"],
-		["Equipamento 6","Preço","Peso"],
-		["Equipamento 7","Preço","Peso"],
-		["Equipamento 8","Preço","Peso"],
-		["Equipamento 9","Preço","Peso"]
-	]
+	armas:[],
+	equipo:[]
 }

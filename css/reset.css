@@ -1,17 +1,60 @@
 *{
 	margin: 0;
 	padding: 0;
-	font-family: Arial;
+	font-family: cyberPunkFont;
 }
-div{
-	/*border: 1px solid;*/
+
+@font-face{
+	font-family: cyberPunkFont;
+	/*src: url('../assets/CIND.otf');*/
+	src: url('../assets/AstroSpace.otf');
+	/*src: url('../assets/DS-DIGI.TTF');*/
 }
+
+:root{
+	--darkGrey: #222222;
+	--lightGrey: grey;
+	--blue: #77f1ff;
+	--pink: #FF296D;
+}
+
+body{
+	background-image: url('../assets/bg3.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+
+	color: var(--blue);
+}
+
+.bgFilter{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--pink);
+	z-index: -1;
+	opacity: .1;
+}
+
 ul{
 	list-style-position: inside;
 }
+
 li{
-	margin: 5px;
+	margin: 10px;
 }
+
+tr:hover{
+	background-color: var(--blue);
+	color: var(--darkGrey);
+	font-weight: bolder;
+}
+/*li:hover{
+	background-color: var(--blue);
+	color: var(--darkGrey);
+	font-weight: bolder;
+}*/
 td,th{
 	border: 1px solid;
 	margin: 5px;
@@ -19,19 +62,21 @@ td,th{
 	border-radius: 3px;
 	
 }
+
 th{
 	text-align: left;
 }
-.input{
-	text-align: center;
-	font-style: italic;
-}
+
 img{
-	width: 300px;
+	width: 280px;
 	display: block;
 	margin: auto;
 }
 
-hr,h3{
+h3{
 	margin: 10px 0px;
+}
+
+.input{
+	text-align: center;
 }

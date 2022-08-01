@@ -1,6 +1,9 @@
 .char-sheet-attr{
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
-
 
 .rd-table{
 	margin-top: 10px;

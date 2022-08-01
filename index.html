@@ -4,20 +4,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="css/controlPannel.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/layout.css">
-	<link rel="stylesheet" href="css/controlPannel.css">
-	<link rel="stylesheet" href="css/layout/header.css">
-	<link rel="stylesheet" href="css/layout/attr.css">
-	<link rel="stylesheet" href="css/layout/implantes.css">
+
+	<link rel="stylesheet" href="css/layout/charSheetHeader.css">
+	<link rel="stylesheet" href="css/layout/charSheetTitle.css">
+	<link rel="stylesheet" href="css/layout/charSheetAttr.css">
+	<link rel="stylesheet" href="css/layout/charSheetImg.css">
+	<link rel="stylesheet" href="css/layout/charSheetArmas.css">
+	<link rel="stylesheet" href="css/layout/charSheetPerks.css">
+	<link rel="stylesheet" href="css/layout/charSheetEquipo.css">
 
 	<script type="module" src="main.js"></script>
 </head>
 <body>
+	<div class="bgFilter"></div>
 
 	<div class="controlPannel">
 		<div class="ctr-btn">Cassandra</div>
-		<div class="ctr-btn">Galadry</div>
+		<div class="ctr-btn">Galadriel</div>
 		<div class="ctr-btn">Buddy</div>
 		<div class="ctr-btn">Herman</div>
 		<div class="ctr-btn">Slot 5</div>
@@ -132,45 +138,69 @@
 
 			</div>
 
-			<div class="pannel">
+			<div class="char-sheet-img pannel">
 				
 				<img src=""  class="input" alt="">
 
 			</div>
 		</div>
 
+		<div class="flex sec sec4">
+			
+			<div class="char-sheet-armas pannel">
+				
+				<h2>Armas</h2>
+
+				<table class="armas-table">
+					<tr>
+						<th>Nome</th>
+						<th>Tipo</th>
+						<th>Precisão</th>
+						<th>Ocult.</th>
+						<th>Dispon.</th>
+						<th>Dano</th>
+						<th># Tiros</th>
+						<th>Cdt</th>
+						<th>Conf</th>
+					</tr>
+				</table>
+
+			</div>
+
+		</div>
+
 		<div class="flex sec sec3">
 			
-			<div class="pannel">
+			<div class="char-sheet-perks pannel">
 				
 				<h2>Pericias</h2>
 
-				<h3>Habilidades Especiais</h3>
+				<h3 class="perk-list-title title-special">Habilidades Especiais</h3>
 
 				<ul class="perk-list-special">
 				</ul>
 
-				<h3>Auto-Controle</h3>
+				<h3 class="perk-list-title title-auCon">Auto-Controle</h3>
 
 				<ul class="perk-list-auCon">
 				</ul>
 
-				<h3>Empatia</h3>
+				<h3 class="perk-list-title title-emp">Empatia</h3>
 
 				<ul class="perk-list-emp">
 				</ul>
 
-				<h3>Inteligencia</h3>
+				<h3 class="perk-list-title title-int">Inteligencia</h3>
 
 				<ul class="perk-list-int">
 				</ul>
 
-				<h3>Reflexos</h3>
+				<h3 class="perk-list-title title-ref">Reflexos</h3>
 
 				<ul class="perk-list-ref">
 				</ul>
 
-				<h3>Técnicas</h3>
+				<h3 class="perk-list-title title-tec">Técnicas</h3>
 
 				<ul class="perk-list-tec">
 				</ul>
@@ -185,15 +215,25 @@
 
 			</div>
 
-			<div class="pannel">
+			<div class="char-sheet-equipo pannel">
 				
 				<h2>Implantes Cibernéticos</h2>
 
 				<table class="imp-table">
 					<tr>
-						<th class="long-cell">Tipo</th>
+						<th>Tipo</th>
 						<th>PH</th>
 						<th>Preço</th>
+					</tr>
+				</table>
+
+				<h2>Equipamento</h2>
+
+				<table class="equipo-table">
+					<tr>
+						<th>Tipo</th>
+						<th>Preço</th>
+						<th>Peso</th>
 					</tr>
 				</table>
 

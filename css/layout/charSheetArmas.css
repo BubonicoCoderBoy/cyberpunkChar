@@ -1,0 +1,12 @@
+.char-sheet-armas{
+	width: 100%;
+}
+.char-sheet-armas>h2{
+	text-align: center;
+}
+.armas-table{
+	width: 80%;
+	margin: auto;
+	margin-top: 10px;
+
+}
