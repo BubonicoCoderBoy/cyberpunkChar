@@ -1,20 +1,20 @@
 export var ficha = {
 	id:1,
-	nome:"Bud Weiser",
+	nome:"Buddy Weiser",
 	role:"Midia",
 	attr:{
-		INT:3,
-		REF:10,
-		TEC:3,
+		INT:5,
+		REF:6,
+		TEC:8,
 		AutCon:9,
-		ATR:7,
-		SOR:4,
-		MOV:6,
-		TCO:10,
-		EMP:7,
-		Correr:18,
-		Saltar:4.5,
-		Levantar:10
+		ATR:10,
+		SOR:9,
+		MOV:10,
+		TCO:7,
+		EMP:9,
+		Correr:30,
+		Saltar:7.5,
+		Levantar:40
 	},
 	rd:{
 		cabeca:0,
@@ -24,43 +24,59 @@ export var ficha = {
 		pernaD:0,
 		pernaE:0
 	},
-	VIT:14,
-	MTC:0,
+	VIT:13,
+	MTC:2,
 	imgPath:"./assets/bud.png",
 	perks:{
 		special:[
-			["Familia",3],
-			["Resistencia",6]
+			["Credibilidade",4],
+			["Recursos",4],
+			["Negociar",4]
+		],
+		auCon:[
+			["Manha",4]
+		],
+		emp:[
+			["Percepção",4],
+			["Entrevista",4],
+			["Sedução",4],
+			["Persuasão e Lábia",4]
 		],
 		int: [
-			["Atenção/Notar",1],
-			["Sobrevivencia",5]
+			["Atenção/Notar",4],
+			["Composição",4],
+			["Educação e Cultura Geral",4],
+			["Esconder/Evadir",3],
+			["Idioma",2],
+			["Programação",2]
 		],
 		ref: [
-			["Atletismo",6],
-			["Briga",10],
-			["Condução",2],
-			["Artes Marciais - Boxe",7],
-			["Armas Brancas - Porrete",4],
-			["Fuzil",2]
+			["Artes Marciais",2],
+			["Furtividade",3]
 		],
 		tec: [
-			["Tecnologia Básica",1]
+			["Fotografia e Filmagem",4],
+			["Tocar Instrumento",4]
 		]
 	},
 	REP:2,
 	PEA:0,
 	Humanidade:0,
 	implantes:[
-		["Amplificador Sandevistan",0,0],
-		["Intensificador de Adrenalina",0,0],
-		["Pele Reforçada",0,0],
-		["Soqueira de Aço",0,0],
-		["Ariete Hidráulico",0,0],
-		["Articulação Reforçada",0,0],
-		["Armação - B",0,0],
-		["Arma Retratil - Militech Elect. Canhão Laser",0,0]
+		["Bolso Subcutaneo",0,0],
+		["Armadura Subcutanea",0,0],
+		["Gravador Digital",0,0],
+		["Anticorpos Reforçados",0,0],
+		["Nano Cirurgiões",0,0],
+		["Time Square Marquee",0,0],
+		["Proteção Ante Ofuscante",0,0]
 	],
 	armas:[],
-	equipo:[]
+	equipo:[
+		["Apartamento Medio",0,0],
+		["Moto Aprimorada Off-Road",0,0],
+		["Estudio de Video - Utencilios Gravar e Editar",0,0],
+		["500k Seguidores",0,0],
+		["Capa Invisibilidade",0,0]
+	]
 }
