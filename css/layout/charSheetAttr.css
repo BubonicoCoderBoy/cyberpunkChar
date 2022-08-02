@@ -32,3 +32,6 @@
 .misc > :last-child{
 	width: 100%;
 }
+.misc .pannel{
+	box-shadow: none;
+}

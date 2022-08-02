@@ -57,192 +57,113 @@ export function renderChar(char){
 
 			let item = document.createElement("li")
 
-			item.innerText = `${char.perks[x][y][0]} [${char.perks[x][y][1]}]`
+			item.innerText = `${char.perks[x][y][0]} -> [ ${char.perks[x][y][1]} ]`
 
 			list.append(item)			
 		}
 	}
 
-	// -------------- IMPLANTES -------------
-
 	inputPool[23].innerText = "Rep : " + char.REP
 	inputPool[24].innerText = "PE Atuais " + char.PEA
 	inputPool[25].innerText = "Humanidade " + char.Humanidade
 
+	// -------------- TABELA DE IMPLANTES -------------
+
 	let implantesTable = document.querySelector(".imp-table")
 
-	implantesTable.innerHTML = ""	
+	let implantesHeaderData = ["Tipo","PH","Preço"]
 
-	let headerRow = document.createElement("tr")
+	generateTable(implantesHeaderData, char.implantes, implantesTable)
 
-	let tableHeader1 = document.createElement("th")
-	tableHeader1.innerText = "Tipo"
-	let tableHeader2 = document.createElement("th")
-	tableHeader2.innerText = "PH"
-	let tableHeader3 = document.createElement("th")
-	tableHeader3.innerText = "Preço"
+	// implantesTable.childNodes.forEach( (node,index) => {
 
-	headerRow.append(tableHeader1)
-	headerRow.append(tableHeader2)
-	headerRow.append(tableHeader3)
+	// 	if(index != 0){
 
-	implantesTable.append(headerRow)
+	// 		node.addEventListener("mouseover",()=> {
 
-	for (let x = 0 ; x < char.implantes.length ; x++){
+	// 			let dialog = document.createElement("div")
 
-		let row = document.createElement("tr")
+	// 			dialog.className = "dialog"
 
-		let data1 = document.createElement("td")
-		data1.innerText = char.implantes[x][0]
+	// 			dialog.innerText = "Teste"
 
-		let data2 = document.createElement("td")
-		data2.innerText = char.implantes[x][1]
+	// 			node.parentElement.prepend(dialog)
 
-		let data3 = document.createElement("td")
-		data3.innerText = char.implantes[x][2]
+	// 		})
 
-		row.append(data1)
-		row.append(data2)
-		row.append(data3)
+	// 		node.addEventListener("mouseout",()=>{
 
-		implantesTable.append(row)
+	// 			node.parentElement.childNodes.forEach( child => {
 
-	}
+	// 				if(child.className == "dialog"){ child.remove() }
 
-	// -------------- ARMAS -------------
+	// 			})
+
+	// 		})
+
+	// 	}
+		
+	// })
+
+	// -------------- TABELA DE ARMAS -------------
 
 	let armasTable = document.querySelector(".armas-table")
 
-	armasTable.innerHTML = ""	
+	let armasHeaderData = ["Nome","Tipo","Precisão","Ocult.","Dispon.","Dano","Tiros","CdT","Conf"]
 
-	headerRow = document.createElement("tr")
+	generateTable(armasHeaderData, char.armas, armasTable)
 
-	tableHeader1 = document.createElement("th")
-	tableHeader1.innerText = "Nome"
-
-	tableHeader2 = document.createElement("th")
-	tableHeader2.innerText = "Tipo"
-
-	tableHeader3 = document.createElement("th")
-	tableHeader3.innerText = "Precisão"
-
-	let tableHeader4 = document.createElement("th")
-	tableHeader4.innerText = "Ocult."
-
-	let tableHeader5 = document.createElement("th")
-	tableHeader5.innerText = "Dispon."
-
-	let tableHeader6 = document.createElement("th")
-	tableHeader6.innerText = "Dano"
-
-	let tableHeader7 = document.createElement("th")
-	tableHeader7.innerText = "Tiros"
-
-	let tableHeader8 = document.createElement("th")
-	tableHeader8.innerText = "CdT"	
-
-	let tableHeader9 = document.createElement("th")
-	tableHeader9.innerText = "Conf"			
-
-	headerRow.append(tableHeader1)
-	headerRow.append(tableHeader2)
-	headerRow.append(tableHeader3)
-	headerRow.append(tableHeader3)
-	headerRow.append(tableHeader4)
-	headerRow.append(tableHeader5)
-	headerRow.append(tableHeader6)
-	headerRow.append(tableHeader7)
-	headerRow.append(tableHeader8)
-	headerRow.append(tableHeader9)
-
-	armasTable.append(headerRow)
-
-	for (let x = 0 ; x < char.armas.length ; x++){
-
-		let row = document.createElement("tr")
-
-		let data1 = document.createElement("td")
-		data1.innerText = char.armas[x][0]
-
-		let data2 = document.createElement("td")
-		data2.innerText = char.armas[x][1]
-
-		let data3 = document.createElement("td")
-		data3.innerText = char.armas[x][2]
-
-		let data4 = document.createElement("td")
-		data4.innerText = char.armas[x][3]
-
-		let data5 = document.createElement("td")
-		data5.innerText = char.armas[x][4]
-
-		let data6 = document.createElement("td")
-		data6.innerText = char.armas[x][5]
-
-		let data7 = document.createElement("td")
-		data7.innerText = char.armas[x][6]
-
-		let data8 = document.createElement("td")
-		data8.innerText = char.armas[x][7]
-
-		let data9 = document.createElement("td")
-		data9.innerText = char.armas[x][8]
-
-		row.append(data1)
-		row.append(data2)
-		row.append(data3)
-		row.append(data4)
-		row.append(data5)
-		row.append(data6)
-		row.append(data7)
-		row.append(data8)
-		row.append(data9)
-
-		armasTable.append(row)
-
-	}
-
-	// -------------- Equipo -------------
+	// -------------- TABELA DE EQUIPAMENTO -------------
 
 	let equipoTable = document.querySelector(".equipo-table")
 
-	equipoTable.innerHTML = ""
+	let equipoHeaderData = ["Tipo","Peso","Preço"]
 
-	headerRow = document.createElement("tr")
+	generateTable(equipoHeaderData,char.equipo,equipoTable)
 
-	tableHeader1 = document.createElement("th")
-	tableHeader1.innerText = "Tipo"
-	tableHeader2 = document.createElement("th")
-	tableHeader2.innerText = "Preço"
-	tableHeader3 = document.createElement("th")
-	tableHeader3.innerText = "Peso"
+	// -------------- Funções Para Gerar Interface -------------
 
-	headerRow.append(tableHeader1)
-	headerRow.append(tableHeader2)
-	headerRow.append(tableHeader3)
+	function generateTable(header,data,table){
+		// header -> Array com os titulos da tabela
+		// data -> Matriz de dados a serem renderizados na tabela
+		// table -> elemento HTML onde o material será renderizado
 
-	equipoTable.append(headerRow)
+		table.innerHTML = ""
 
-	console.log(char.equipo.length)
+		let headerRow = document.createElement("tr")
 
-	for (let x = 0 ; x < char.equipo.length ; x++){
+		for (let h = 0 ; h < header.length ; h++){
 
-		let row = document.createElement("tr")
+			let headerCell = document.createElement("th")
 
-		let data1 = document.createElement("td")
-		data1.innerText = char.equipo[x][0]
+			headerCell.innerText = header[h]
 
-		let data2 = document.createElement("td")
-		data2.innerText = char.equipo[x][1]
+			headerRow.append(headerCell)
 
-		let data3 = document.createElement("td")
-		data3.innerText = char.equipo[x][2]
+		}
 
-		row.append(data1)
-		row.append(data2)
-		row.append(data3)
+		table.append(headerRow)
 
-		equipoTable.append(row)
+		for(let r = 0 ; r < data.length ; r++){
+
+			let row = document.createElement("tr")
+
+			for(let c = 0 ; c < data[r].length ; c++){
+
+				let cell = document.createElement("td")
+
+				cell.innerText = data[r][c]
+
+				row.append(cell)
+
+			}
+
+			table.append(row)
+
+		}
+
+		return table
 
 	}
+
 }

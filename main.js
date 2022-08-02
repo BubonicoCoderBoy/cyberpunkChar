@@ -2,6 +2,8 @@ import {ficha as Cassandra} from './chars/cassy.js'
 import {ficha as Galadriel} from './chars/galadry.js'
 import {ficha as Buddy} from './chars/bud.js'
 import {ficha as Herman} from './chars/herman.js'
+import {ficha as Cleytao} from './chars/cleytao.js'
+
 import {renderChar} from './render.js'
 
 renderChar(Cassandra)
@@ -15,3 +17,5 @@ buttons[1].addEventListener("click",()=>renderChar(Galadriel))
 buttons[2].addEventListener("click",()=>renderChar(Buddy))
 
 buttons[3].addEventListener("click",()=>renderChar(Herman))
+
+buttons[4].addEventListener("click",()=>renderChar(Cleytao))
